@@ -1,10 +1,82 @@
 [
   {
     "id": "1",
-    "judul": "Contoh item pertama",
-    "kategori": "Contoh",
-    "fieldTema1": "ganti sesuai field tema",
-    "fieldTema2": 0,
-    "fieldTema3": "ganti sesuai field tema"
+    "judul": "Calathea Orbifolia",
+    "kategori": "Tanaman daun",
+    "namaLatin": "Goeppertia orbifolia",
+    "frekuensiSiram": "2-3 kali dalam seminggu, tanah dijaga agar tetap lembab",
+    "kebutuhanCahaya": "Terang tidak langsung"
+  },
+  {
+    "id": "2",
+    "judul": "Alocasia Zebrina",
+    "kategori": "Tanaman daun",
+    "namaLatin": "Alocasia zebrina",
+    "frekuensiSiram": "Seminggu sekali",
+    "kebutuhanCahaya": "Terang tidak langsung"
+  },
+  {
+    "id": "3",
+    "judul": "Hoya Kerrii",
+    "kategori": "Sukulen",
+    "namaLatin": "Hoya kerrii",
+    "frekuensiSiram": "Dua minggu sekali",
+    "kebutuhanCahaya": "Terang tidak langsung"
+  },
+  {
+    "id": "4",
+    "judul": "Pilea Peperomioides",
+    "kategori": "Tanaman daun",
+    "namaLatin": "Pilea peperomioides",
+    "frekuensiSiram": "Seminggu sekali",
+    "kebutuhanCahaya": "Terang tidak langsung"
+  },
+  {
+    "id": "5",
+    "judul": "Stromanthe Triostar",
+    "kategori": "Tanaman daun",
+    "namaLatin": "Stromanthe sanguinea 'Triostar'",
+    "frekuensiSiram": "2-3 kali seminggu",
+    "kebutuhanCahaya": "Teduh hingga terang tidak langsung"
+  },
+  {
+    "id": "6",
+    "judul": "String of Pearls",
+    "kategori": "Sukulen",
+    "namaLatin": "Senecio rowleyanus",
+    "frekuensiSiram": "Dua minggu sekali",
+    "kebutuhanCahaya": "Terang, boleh sedikit sinar matahari langsung"
+  },
+  {
+    "id": "7",
+    "judul": "Peperomia Watermelon",
+    "kategori": "Tanaman daun",
+    "namaLatin": "Peperomia argyreia",
+    "frekuensiSiram": "Seminggu sekali",
+    "kebutuhanCahaya": "Terang tidak langsung"
+  },
+  {
+    "id": "8",
+    "judul": "Begonia Rex",
+    "kategori": "Tanaman daun",
+    "namaLatin": "Begonia rex-cultorum",
+    "frekuensiSiram": "Seminggu sekali",
+    "kebutuhanCahaya": "Teduh atau terang tidak langsung"
+  },
+  {
+    "id": "9",
+    "judul": "Pakis Kelabang",
+    "kategori": "Paku-pakuan",
+    "namaLatin": "Phlebodium aureum",
+    "frekuensiSiram": "Seminggu 2 kali",
+    "kebutuhanCahaya": "Teduh"
+  },
+  {
+    "id": "10",
+    "judul": "Kaktus Bulan",
+    "kategori": "Kaktus",
+    "namaLatin": "Gymnocalycium mihanovichii",
+    "frekuensiSiram": "Dua minggu sekali",
+    "kebutuhanCahaya": "Terang, sinar matahari pagi"
   }
 ]
