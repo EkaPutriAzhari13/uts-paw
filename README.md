@@ -66,6 +66,8 @@ Penilaian akhir selalu memakai `grader/` dan `shared/` versi repo induk, jadi me
 - **Tema**: Koleksi Tanaman Hias
 - **Deployment**: https://ekaputriazhari13.github.io/uts-paw/
 
+![Tangkapan layar beranda](docs/beranda.png)
+
 ## Fitur Utama
 
 1. **Beranda & Ringkasan**:
