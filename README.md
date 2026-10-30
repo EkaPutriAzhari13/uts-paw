@@ -58,32 +58,47 @@ Panduan lengkap beserta solusi kendala umum ada di halaman [Panduan](https://uts
 
 Penilaian akhir selalu memakai `grader/` dan `shared/` versi repo induk, jadi mengubahnya di fork tidak berpengaruh.
 
-## README milikmu
+# UTS PAW - Koleksi Tanaman Hias
 
-Ganti seluruh isi berkas ini dengan dokumentasi aplikasimu (butir rubrik A4). Kerangka berikut boleh dipakai:
+- **Nama**: Eka Putri Azhari Ritonga
+- **NIM**: 123140028
+- **Kelas**: RA
+- **Tema**: Koleksi Tanaman Hias
+- **Deployment**: https://ekaputriazhari13.github.io/uts-paw/
 
-```markdown
-# Nama Aplikasi
+## Fitur Utama
 
-Nama: ...
-NIM: ...
-Kelas: ...
-Tema: ...
-Deployment: https://USERNAME.github.io/uts-paw/
+1. **Beranda & Ringkasan**:
+   - Menampilkan judul utama dan informasi ringkas koleksi tanaman hias.
+   - Navigasi cepat menuju daftar koleksi dan penambahan tanaman.
 
-![Tangkapan layar beranda](docs/beranda.png)
+2. **Daftar Koleksi & Pencarian**:
+   - Menampilkan daftar koleksi tanaman hias secara dinamis dari file JSON dan `localStorage`.
+   - Fitur pencarian instan berdasarkan judul tanaman.
+   - Fitur filter penyaringan berdasarkan kategori tanaman.
 
-## Fitur
+3. **Detail Tanaman**:
+   - Menampilkan detail lengkap tanaman: Nama Latin, Frekuensi Siram, dan Kebutuhan Cahaya.
+   - Menampilkan pesan "tidak ditemukan" jika ID tanaman tidak ada.
+   - Opsi hapus tanaman yang mengarahkan pengguna kembali ke halaman koleksi.
 
-- ...
+4. **Form Tambah Tanaman**:
+   - Form terkontrol untuk input data tanaman baru (Judul, Kategori, Nama Latin, Frekuensi Siram, Kebutuhan Cahaya).
+   - Validasi input dengan pesan error interaktif (`role="alert"`).
+   - Penyimpanan data baru secara permanen di `localStorage`.
 
-## Menjalankan secara lokal
+5. **Statistik Koleksi**:
+   - Menampilkan rekapitulasi jumlah tanaman per kategori dalam bentuk tabel HTML lengkap dengan baris total.
 
+6. **Halaman Tentang & 404**:
+   - Halaman tentang yang berisi informasi Nama dan NIM pengembang.
+   - Halaman 404 khusus untuk menangani rute yang tidak dikenal.
+
+---
+
+## Menjalankan Secara Lokal
+
+```bash
 cd app
 npm install
 npm run dev
-
-## Konsep React yang dipakai
-
-- ...
-```
