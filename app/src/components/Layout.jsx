@@ -1,31 +1,48 @@
-import { NavLink, Outlet } from 'react-router-dom'
-import './Layout.css'
-
-const MENU = [
-  { ke: '/', label: 'Beranda' },
-  { ke: '/koleksi', label: 'Koleksi' },
-  { ke: '/tambah', label: 'Tambah' },
-  { ke: '/statistik', label: 'Statistik' },
-  { ke: '/tentang', label: 'Tentang' },
-]
+import { NavLink, Outlet } from 'react-router-dom';
+import './Layout.css';
 
 export default function Layout() {
   return (
-    <div className="kerangka">
-      <header className="kepala">
-        <strong>Koleksi Tanaman Hias</strong>
-        <nav className="menu">
-          {MENU.map(({ ke, label }) => (
-            <NavLink key={ke} to={ke} end={ke === '/'}>
-              {label}
+    <div className="layout-container" id="app-tanaman">
+      <header className="header" id="navigasi-tanaman">
+        <div className="header-inner">
+          <div className="brand">
+            <span className="brand-badge">Flora</span>
+            <span className="brand-title">Koleksi Tanaman Hias</span>
+          </div>
+          <nav className="nav-menu">
+            <NavLink to="/" end className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}>
+              Beranda
             </NavLink>
-          ))}
-        </nav>
+            <NavLink to="/koleksi" className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}>
+              Koleksi
+            </NavLink>
+            <NavLink to="/tambah" className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}>
+              Tambah
+            </NavLink>
+            <NavLink to="/statistik" className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}>
+              Statistik
+            </NavLink>
+            <NavLink to="/tentang" className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}>
+              Tentang
+            </NavLink>
+          </nav>
+        </div>
       </header>
-      <main className="isi">
-        <Outlet />
+
+      <main className="main-content" id="konten-tanaman">
+        <div className="content-container">
+          <Outlet />
+        </div>
       </main>
-      <footer className="kaki">Ujian Tengah Semester Pengembangan Aplikasi Web</footer>
+
+      <footer className="footer" id="kaki-tanaman">
+        <div className="footer-inner">
+          <p className="footer-text">
+            Koleksi Tanaman Hias &copy; {new Date().getFullYear()} Eka Putri Azhari Ritonga &bull; 123140028
+          </p>
+        </div>
+      </footer>
     </div>
-  )
+  );
 }
