@@ -58,49 +58,43 @@ Panduan lengkap beserta solusi kendala umum ada di halaman [Panduan](https://uts
 
 Penilaian akhir selalu memakai `grader/` dan `shared/` versi repo induk, jadi mengubahnya di fork tidak berpengaruh.
 
+Ganti seluruh isi berkas ini dengan dokumentasi aplikasimu (butir rubrik A4). Kerangka berikut boleh dipakai:
+
+
 # UTS PAW - Koleksi Tanaman Hias
 
-- **Nama**: Eka Putri Azhari Ritonga
-- **NIM**: 123140028
-- **Kelas**: RA
-- **Tema**: Koleksi Tanaman Hias
-- **Deployment**: https://ekaputriazhari13.github.io/uts-paw/
+Nama: Eka Putri Azhari Ritonga
+NIM: 123140028
+Kelas: RA
+Tema: Koleksi Tanaman Hias
+Deployment: https://ekaputriazhari13.github.io/uts-paw/
 
 ![Tangkapan layar beranda](docs/beranda.png)
 
-## Fitur Utama
+## Fitur
 
-1. **Beranda & Ringkasan**:
-   - Menampilkan judul utama dan informasi ringkas koleksi tanaman hias.
-   - Navigasi cepat menuju daftar koleksi dan penambahan tanaman.
+- 1. Navigasi Multi-halaman: perpindahan halaman beranda, koleksi, detail, statistik, dan tambah data dengan react router.
+- 2. Pencarian data: melakukan pencarian data tanaman berdasarkan judul
+- 3. Filtering data: dapat melakukan filter tanaman berdasarkan kategori
+- 4. Pengujian unit: pengujian komponen dan fitur dengan Vitest dan React Testing Library
 
-2. **Daftar Koleksi & Pencarian**:
-   - Menampilkan daftar koleksi tanaman hias secara dinamis dari file JSON dan `localStorage`.
-   - Fitur pencarian instan berdasarkan judul tanaman.
-   - Fitur filter penyaringan berdasarkan kategori tanaman.
+## Menjalankan secara lokal
 
-3. **Detail Tanaman**:
-   - Menampilkan detail lengkap tanaman: Nama Latin, Frekuensi Siram, dan Kebutuhan Cahaya.
-   - Menampilkan pesan "tidak ditemukan" jika ID tanaman tidak ada.
-   - Opsi hapus tanaman yang mengarahkan pengguna kembali ke halaman koleksi.
-
-4. **Form Tambah Tanaman**:
-   - Form terkontrol untuk input data tanaman baru (Judul, Kategori, Nama Latin, Frekuensi Siram, Kebutuhan Cahaya).
-   - Validasi input dengan pesan error interaktif (`role="alert"`).
-   - Penyimpanan data baru secara permanen di `localStorage`.
-
-5. **Statistik Koleksi**:
-   - Menampilkan rekapitulasi jumlah tanaman per kategori dalam bentuk tabel HTML lengkap dengan baris total.
-
-6. **Halaman Tentang & 404**:
-   - Halaman tentang yang berisi informasi Nama dan NIM pengembang.
-   - Halaman 404 khusus untuk menangani rute yang tidak dikenal.
-
----
-
-## Menjalankan Secara Lokal
-
-```bash
 cd app
 npm install
 npm run dev
+
+## Konsep React yang dipakai
+
+1. **Hooks Bawaan:**
+   - Pemanfaatan useState dan useEffect
+2. **Custom Hooks:**
+   - Custom hook di folder src/hooks/
+3. **Context API:**
+   - KoleksiContext untuk global state management
+4. **Routing:**
+   - react-router-dom dengan rute utama, useParams, useNavigate, dan 404
+5. **Komponen Modular:**
+   - Pemisahan komponen di src/components/
+6. **CSS dan Semantik:**
+   - Responsive design dan HTML5 semantik
