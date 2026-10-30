@@ -1,19 +1,20 @@
 :root {
-  --primary-pink: #d85a7f;
-  --primary-dark: #b84366;
-  --primary-light: #fff0f5;
-  --primary-border: #f3c2d4;
-  --accent-rose: #e782a1;
-  --text-main: #33272c;
-  --text-muted: #6f5f67;
-  --bg-page: #fdf7f9;
+  --primary-green: #2f5d46;
+  --primary-dark: #234636;
+  --primary-light: #e8f1e4;
+  --primary-border: #cfdfc8;
+  --accent-terracotta: #c46a45;
+  --accent-terracotta-dark: #a85635;
+  --text-main: #2b2f2a;
+  --text-muted: #647064;
+  --bg-page: #faf7f0;
   --bg-card: #ffffff;
   --radius-sm: 8px;
   --radius-md: 14px;
   --radius-lg: 20px;
-  --shadow-sm: 0 2px 8px rgba(216, 90, 127, 0.08);
-  --shadow-md: 0 8px 24px rgba(216, 90, 127, 0.12);
-  --shadow-hover: 0 12px 28px rgba(216, 90, 127, 0.18);
+  --shadow-sm: 0 2px 8px rgba(47, 93, 70, 0.08);
+  --shadow-md: 0 8px 24px rgba(47, 93, 70, 0.12);
+  --shadow-hover: 0 12px 28px rgba(47, 93, 70, 0.18);
   --transisi: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -36,8 +37,9 @@ body {
   flex-direction: column;
 }
 
+/* ===== Header ===== */
 #navigasi-tanaman {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(250, 247, 240, 0.95);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--primary-border);
   position: sticky;
@@ -64,7 +66,7 @@ body {
 }
 
 .brand-badge {
-  background: linear-gradient(135deg, var(--primary-pink), var(--accent-rose));
+  background: var(--primary-green);
   color: #ffffff;
   font-size: 0.8rem;
   font-weight: 700;
@@ -77,10 +79,17 @@ body {
 .brand-title {
   font-size: 1.25rem;
   font-weight: 800;
-  color: var(--primary-dark);
+  color: var(--primary-green);
   letter-spacing: -0.01em;
 }
 
+/* Pseudo-element #1: hiasan daun kecil di judul */
+.brand-title::before {
+  content: "🌿";
+  margin-right: 0.4rem;
+}
+
+/* ===== Menu navigasi ===== */
 .nav-menu {
   display: flex;
   gap: 0.4rem;
@@ -102,21 +111,22 @@ body {
 }
 
 .nav-link:hover {
-  color: var(--primary-dark);
+  color: var(--accent-terracotta);
   background-color: #ffffff;
 }
 
 .nav-link.active {
-  background-color: var(--primary-pink);
+  background-color: var(--primary-green);
   color: #ffffff;
-  box-shadow: 0 2px 6px rgba(216, 90, 127, 0.3);
+  box-shadow: 0 2px 6px rgba(47, 93, 70, 0.3);
 }
 
 .nav-link:focus-visible {
-  outline: 2px solid var(--primary-dark);
+  outline: 2px solid var(--accent-terracotta);
   outline-offset: 2px;
 }
 
+/* ===== Konten ===== */
 #konten-tanaman {
   flex: 1;
   padding: 2.5rem 1.5rem;
@@ -127,8 +137,9 @@ body {
   margin: 0 auto;
 }
 
+/* ===== Footer ===== */
 #kaki-tanaman {
-  background-color: #ffffff;
+  background-color: var(--primary-light);
   border-top: 1px solid var(--primary-border);
   padding: 1.5rem 0;
   margin-top: auto;
@@ -146,6 +157,7 @@ body {
   color: var(--text-muted);
 }
 
+/* ===== Tombol (terakota) ===== */
 .btn, button, input[type="submit"] {
   display: inline-flex;
   align-items: center;
@@ -159,13 +171,13 @@ body {
   cursor: pointer;
   transition: var(--transisi);
   text-decoration: none;
-  background-color: var(--primary-pink);
+  background-color: var(--accent-terracotta);
   color: #ffffff;
   box-shadow: var(--shadow-sm);
 }
 
 .btn:hover, button:hover, input[type="submit"]:hover {
-  background-color: var(--primary-dark);
+  background-color: var(--accent-terracotta-dark);
   box-shadow: var(--shadow-md);
   transform: translateY(-1px);
 }
@@ -176,16 +188,17 @@ body {
 
 .btn-secondary, button.secondary {
   background-color: var(--primary-light);
-  color: var(--primary-dark);
+  color: var(--primary-green);
   border: 1px solid var(--primary-border);
   box-shadow: none;
 }
 
 .btn-secondary:hover, button.secondary:hover {
-  background-color: #f7d6e4;
+  background-color: #d8e8d2;
   color: var(--primary-dark);
 }
 
+/* ===== Form (fokus hijau) ===== */
 input[type="text"],
 input[type="number"],
 input[type="email"],
@@ -205,10 +218,11 @@ input:focus,
 select:focus,
 textarea:focus {
   outline: none;
-  border-color: var(--primary-pink);
-  box-shadow: 0 0 0 3px rgba(216, 90, 127, 0.2);
+  border-color: var(--primary-green);
+  box-shadow: 0 0 0 3px rgba(47, 93, 70, 0.2);
 }
 
+/* ===== Tabel ===== */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -226,21 +240,22 @@ th, td {
 
 th {
   background-color: var(--primary-light);
-  color: var(--primary-dark);
+  color: var(--primary-green);
   font-weight: 700;
   border-bottom: 2px solid var(--primary-border);
 }
 
 tr:not(:last-child) td {
-  border-bottom: 1px solid #f9e6ee;
+  border-bottom: 1px solid #edf3ea;
 }
 
 tr:hover td {
-  background-color: #fff9fb;
+  background-color: #f6faf4;
 }
 
+/* ===== Kartu ===== */
 .card {
-  background-color: var(--bg-card);
+  background-color: var(--primary-light);
   border: 1px solid var(--primary-border);
   border-radius: var(--radius-md);
   padding: 1.5rem;
@@ -250,7 +265,7 @@ tr:hover td {
 
 .card:hover {
   box-shadow: var(--shadow-hover);
-  border-color: var(--accent-rose);
+  border-color: var(--primary-green);
   transform: translateY(-2px);
 }
 
@@ -260,11 +275,12 @@ tr:hover td {
   font-size: 0.8rem;
   font-weight: 700;
   border-radius: 9999px;
-  background-color: var(--primary-light);
-  color: var(--primary-dark);
+  background-color: #ffffff;
+  color: var(--primary-green);
   border: 1px solid var(--primary-border);
 }
 
+/* ===== Responsif ===== */
 @media (max-width: 768px) {
   .header-inner {
     flex-direction: column;
